@@ -14,8 +14,14 @@
 
 # Uncomment this to preserve the line number information for
 # debugging stack traces.
-#-keepattributes SourceFile,LineNumberTable
+-keepattributes SourceFile,LineNumberTable
 
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep public class sk.upjs.ics.vma.r8.User
+
+-printusage /tmp/r8-usage.txt
+-printmapping /tmp/r8-mapping.txt
+-printconfiguration /tmp/r8-config.txt

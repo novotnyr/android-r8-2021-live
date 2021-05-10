@@ -6,7 +6,6 @@ import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 
-
 private const val TAG = "R8-Main"
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +14,10 @@ class MainActivity : AppCompatActivity() {
 
         lifecycleScope.launchWhenResumed {
             val users = restApi.getUsers()
+            Log.d(TAG, users::class.toString())
             Log.d(TAG, users.toString())
         }
     }
-
 
     fun onMegaButtonClick(view: View) {
         Log.d(TAG, "Megabutton clicked!")
